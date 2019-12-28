@@ -20,7 +20,7 @@
 using System;
 using System.Xml.Serialization;
 
-namespace BmFontReader
+namespace BmFont
 {
     [XmlRoot("font")]
     public class Font

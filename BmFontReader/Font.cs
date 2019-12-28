@@ -37,11 +37,16 @@ namespace BmFontReader
 
         [XmlArray("pages")]
         [XmlArrayItem("page")]
-        public FontPage[] Pages;
+        public FontPage[] Pages { get; set; }
 
         [XmlArray("chars")]
         [XmlArrayItem("char")]
-        public FontChar[] Chars;
+        public FontChar[] Chars { get; set; }
+
+        [XmlArray("kernings")]
+        [XmlArrayItem("kerning")]
+        public FontKerning[] Kernings { get; set; }
+
     }
 
     public class FontInfo
@@ -154,6 +159,14 @@ namespace BmFontReader
 
     public class FontKerning
     {
+        [XmlAttribute("first")]
+        public Int32 First { get; set; }
+
+        [XmlAttribute("second")]
+        public Int32 Second { get; set; }
+
+        [XmlAttribute("amount")]
+        public Int32 Amount { get; set; }
     }
 
 }
